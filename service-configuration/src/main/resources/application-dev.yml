@@ -11,3 +11,10 @@ spring:
           clone-on-start: true
 server:
   port: 8811
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/

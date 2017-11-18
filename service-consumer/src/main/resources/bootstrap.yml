@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        #默认false，设为true表示使用注册中心中的configserver配置而不自己配置configserver的uri
+        enabled: true
+        #指定config server在服务发现中的serviceId，默认为：configserver
+        service-id: configuration-server
+      name: cmp.config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/

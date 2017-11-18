@@ -11,3 +11,7 @@ spring:
           clone-on-start: true
 server:
   port: 8811
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/

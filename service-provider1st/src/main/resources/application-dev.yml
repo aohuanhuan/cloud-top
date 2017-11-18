@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cmp.config
+    name: compute-service
 server:
   port: 8822
 eureka:
