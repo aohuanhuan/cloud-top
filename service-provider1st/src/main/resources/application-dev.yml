@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cmp.config
+server:
+  port: 8822
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
